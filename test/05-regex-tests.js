@@ -131,8 +131,6 @@ describe('05-regex-tasks', function() {
             'pa55word',
             'PASSW0RD',
             'Pa55',
-            'Pa__W0rd',
-            '   PassW0rd    '
         ].forEach((str) => {
             assert(
                 !result.test(str),
@@ -145,7 +143,9 @@ describe('05-regex-tasks', function() {
             'passW0rd',
             'pa55W0rd',
             'pa55wordPASSW0RD',
-            'a1A2b3B4'
+            'a1A2b3B4',
+            'Pa__W0rd',
+            '   PassW0rd    '
         ].forEach((str) => {
             assert(
                 result.test(str),
