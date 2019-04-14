@@ -210,8 +210,9 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(n) {
-  return n % 2 != 0;
+function isPrime(num) {
+  for (var i = 2; i < num; i++) if (num % i === 0) return false;
+  return num > 1;
 }
 
 /**
